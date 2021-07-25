@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #220954;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper nav {
+  width: 20%;
+  float: right;
+  background-color: #5923c6;
+  height: 100vh;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  color: #FFF;
+  padding: 2em;
+  -webkit-clip-path: url(#clipPath);
+          clip-path: url(#clipPath);
+}
+
+.wrapper nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.wrapper nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 1em 0;
+  font-weight: bold;
+}
+
+.wrapper nav p {
+  color: #946be7;
+}
+
+h1 {
+  color: #FFF;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2em;
+  font-size: 1.4em;
+  background: none;
+  border: 3px solid purple;
+  color: #FFF;
+  padding: 1em;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+circle {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+/*# sourceMappingURL=style.css.map */

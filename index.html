@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu With SVG</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <svg>
+            <defs>
+                <clipPath id="clipPath">
+                    <circle class="one" cx="200" cy="400" r="1300" transform="scale(0)" />
+                    <circle class="two" cx="-2200" cy="1900" r="800" transform="scale(0)" />
+                </clipPath>
+            </defs>
+        </svg>
+        <button id="open">Open Nav</button>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#">Certificates</a>
+                    </li>
+                </ul>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor consectetur provident molestiae vero natus esse nemo officia modi, placeat architecto nam laborum magnam ipsa nobis amet quod pariatur reiciendis dolorem!</p> -->
+            </nav>
+            <h1>Oh,,, Yeaaaaaaaaaaaaaah</h1>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script>
+            var tl = new TimelineMax({paused: true});
+            document.getElementById("open").addEventListener("click", () => {
+                this.tl.play();
+            })
+            tl.from("nav", 1, {
+                x: 100,
+                display: 'none',
+                ease: Power2.easeOut,
+                delay:0
+            })
+            tl.to("circle.one", 3, {
+                scale: 1,
+                x: 0,
+                y: -1300,
+                ease: Power2.easeOut
+            }, '-=1')
+            tl.to("circle.two", 4, {
+                scale: 1.8,
+                x: 2900,
+                y: -500,
+                ease: Power2.easeOut
+            }, '-=3')
+            tl.from('h1',1, {
+                opacity: 0,
+                y: 100,
+                ease: Bounce.easeOut,
+                delay: 0
+            }, '-=3.2')
+
+        </script>
+    </body>
+</html>
